@@ -1,0 +1,124 @@
+.header {
+  font-family: Arial, sans-serif;
+  background-color: #3e4249;
+  padding: 10px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  min-width: 150px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Brands dropdown shifted more to the left */
+.dropdown-content.brands {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(145px, 1fr));
+  gap: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  /* shift left from dropdown position */
+  left: -120px; /* increase to move further left */
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-link:hover {
+  background-color: #666; /* Change to any hover color you want */
+  color: #fff;
+}
+
+.admin-icon {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.admin-icon:hover {
+  color: #ffd700; /* Hover gold color */
+}
+
+/* Logo hover */
+.logo-link:hover .logo {
+  color: #ffd700;
+}
+
+/* Nav link hover */
+.link:hover {
+  color: #ffd700;
+}
+
+/* Dropdown icon hover (optional) */
+.dropdown:hover .link,
+.dropdown:hover .dropdown-icon {
+  color: #ffd700;
+}
+
+/* Keep existing dropdown link hover intact */
+.dropdown-link:hover {
+  background-color: #666;
+  color: #ffd700;
+}
